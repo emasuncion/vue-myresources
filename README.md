@@ -1,7 +1,7 @@
-<center>Cambridge GO My Resources VueJS</center>
+Cambridge GO My Resources VueJS
 ===============================
 
-<center>![vue-logo](https://vuejs.org/images/logo.png)</center>
+![vue-logo](https://vuejs.org/images/logo.png)
 
 ## Requirements
 1. [Node.js v8.x (LTS)](https://nodejs.org/en/)
