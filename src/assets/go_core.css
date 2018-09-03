@@ -716,7 +716,7 @@ ul.show-options {
 .navbar-brand {
     width: 250px;
     transition: background-image 1s ease-in-out;
-    background-image: url('~@/assets/svgs/logo.svg');
+    background-image: url('~@/assets/logo.png');
     background-repeat: no-repeat;}
 
 .logo-fade {
