@@ -139,7 +139,6 @@ polygon {
 
 /** BREADCRUMB OVERRIDES AND CUSTOM CLASSES */
 .breadcrumb-container {
-    margin-top: 10px;
     margin-bottom: -50px;
     background-color: #F2F2F2;
     z-index: 1000; }
@@ -437,6 +436,7 @@ polygon {
     max-height: 80px;
     background-color: #000 !important;
     opacity: 1;
+    margin-bottom: 0px !important;
      }
 .go-header .navbar-collapse .navbar-form {
     background-color: black;
@@ -764,7 +764,7 @@ ul.show-options {
         width: 100% !important;
         margin-top: 0px; }
     .go-header-resize .navbar-form a {
-        margin-bottom: 5px; }
+        margin-bottom: 0px; }
 @media (min-width: 768px) {
     .navbar-form {
         margin-top: 0px !important; } }

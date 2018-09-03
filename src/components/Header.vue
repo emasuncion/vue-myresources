@@ -100,8 +100,9 @@
     </div>
     <br/>
 </nav>
-<div class="container breadcrumb-container">
-    <div class="row" id="breadcrumb-row">
+<!--- You are here Home -->
+<div class="breadcrumb-container">
+    <div class="container" id="breadcrumb-row">
         <div class="col-lg-12">
             <br/>
             <ol class="breadcrumb">
@@ -109,15 +110,19 @@
                     <svg>
                         <use xlink:href="#icon-breadcrumbs"></use>
                     </svg>
-                    <BreadCrumbSVG/>
                     <span>You are here:</span>
                 </li>
                 <li class="activeactive"><a
                             href="/go">Home</a></li>
             </ol>
+            <!--- Activate Component -->
+            <div class="row">
+                <Activate />
+            </div>
         </div>
     </div>
 </div>
+<!--- End of You are here Home -->
 <br/>
 <br/>
 <!-- do not delete.  -->
@@ -129,13 +134,14 @@
 <script>
     import LoginSVG from '@/assets/svgs/login.svg'
     import SearchSVG from '@/assets/svgs/search.svg'
-    import BreadCrumbSVG from '@/assets/svgs/breadcrumb.svg'
+    import Activate from './Activate'
+
     export default {
         name: 'Header',
         components: {
             LoginSVG,
             SearchSVG,
-            BreadCrumbSVG
+            Activate
         }
     }
 </script>
