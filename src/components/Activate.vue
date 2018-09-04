@@ -39,7 +39,3 @@
 <!--- End Connect -->
 </div>
 </template>
-
-<script>
-
-</script>

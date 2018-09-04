@@ -110,6 +110,7 @@
                     <svg>
                         <use xlink:href="#icon-breadcrumbs"></use>
                     </svg>
+                    <BreadCrumbSVG/>
                     <span>You are here:</span>
                 </li>
                 <li class="activeactive"><a
@@ -134,6 +135,7 @@
 <script>
     import LoginSVG from '@/assets/svgs/login.svg'
     import SearchSVG from '@/assets/svgs/search.svg'
+    import BreadCrumbSVG from '@/assets/svgs/breadcrumb.svg'
     import Activate from './Activate'
 
     export default {
@@ -141,6 +143,7 @@
         components: {
             LoginSVG,
             SearchSVG,
+            BreadCrumbSVG,
             Activate
         }
     }

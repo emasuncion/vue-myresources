@@ -1,0 +1,602 @@
+[
+   {
+      "id": "5b8ca557e44200e8395df9c9",
+      "index": 0,
+      "title": "Uncovering Psychology VCE Units 1&2",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "PDF TEXTBOOK",
+            "entitlement": "You are entitled to download and store this PDF Textbook for personal use.",
+            "expiry": "Download within 500 days from 13th of August 2018",
+            "accessCode": "H3HG-2XJ6-7YR5-YVLV"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Weblinks",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "Brain animation",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 3,
+            "name": "Glossary",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 4,
+            "name": "List of movies",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 5,
+            "name": "Teacher Resource Package",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 6,
+            "name": "Study Guides",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 7,
+            "name": "Acknowledgement",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 8,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": true
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9a9",
+      "index": 1,
+      "title": "Art-isan Second Edition",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "INTERACTIVE BOOK & PDF TEXTBOOK",
+            "entitlement": null,
+            "expiry": "Valid until 31st of December 2020",
+            "accessCode": "T2P8-JDRU-X5HD-JUHU"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Interactive Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "Word activities",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 3,
+            "name": "Weblinks",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 4,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 5,
+            "name": "Errata",
+            "isLauncher": false,
+            "hasAccess": false
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9b9",
+      "index": 2,
+      "title": "Essential VCE Legal Studies Units 3&4 2nd edition Bundle",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "INTERACTIVE TEXTBOOK AND PDF TEXTBOOK",
+            "entitlement": null,
+            "expiry": "Valid until 31st of December 2019",
+            "accessCode": "QJR3-UVTQ-BZR8-969L"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Interactive Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "Word Activities",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 3,
+            "name": "Weblinks",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 4,
+            "name": "Teacher Resource Package",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 5,
+            "name": "Study Guides",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 6,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": false
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9d9",
+      "index": 3,
+      "title": "Cambridge Legal Studies - Preliminary Second Edition",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "TEACHER RESOURCE PACKAGE",
+            "entitlement": null,
+            "expiry": "Download within 1825 days from 26th of July 2018",
+            "accessCode": "RDM7-RM63-JWLY-WQ7U"
+         },
+         {
+            "index": 1,
+            "type": "TEACHER RESOURCE PACKAGE",
+            "entitlement": null,
+            "expiry": "Download within 1825 days from 26th of July 2018",
+            "accessCode": "UVHJ-XQNK-ZDNW-U3U5"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook & Toolkit",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 1,
+            "name": "Word Activities",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "Weblinks",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 3,
+            "name": "Additional resources",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 4,
+            "name": "Teacher Resource Package",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 5,
+            "name": "Teaching program",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 6,
+            "name": "Marking criteria",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 7,
+            "name": "Updates",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 8,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": false
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9e9",
+      "index": 4,
+      "title": "Essential Standard General Mathematics 2nd Edition Enhanced TIN/CP",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "INTERACTIVE TEXTBOOK AND PDF TEXTBOOK",
+            "entitlement": null,
+            "expiry": "Valid until 31st of December 2018",
+            "accessCode": null
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Student content",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "Interactive Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 3,
+            "name": "Complete worked solutions",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 4,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": false
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9e9",
+      "index": 5,
+      "title": "Cambridge Senior Design and Technology 2nd Edition",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "PDF TEXTBOOK 2 YEAR",
+            "entitlement": "You are entitled to download and store this PDF Textbook for personal use.",
+            "expiry": "Download within 500 days from 12th of July 2018",
+            "accessCode": null
+         },
+         {
+            "index": 1,
+            "type": "PDF TEXTBOOK 2 YEAR",
+            "entitlement": "You are entitled to download and store this PDF Textbook for personal use.",
+            "expiry": "Download within 500 days from 9th of July 2018",
+            "accessCode": null
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Toolkit solutions",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "WebQuests",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 3,
+            "name": "Case studies",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 4,
+            "name": "Weblinks",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 5,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 6,
+            "name": "Teacher support",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 7,
+            "name": "Ask the authors",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 8,
+            "name": "Errata",
+            "isLauncher": false,
+            "hasAccess": false
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9f9",
+      "index": 6,
+      "title": "Language Toolkit 1",
+      "expiryStatus": "soon",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "BUNDLE TOOLKIT",
+            "entitlement": null,
+            "expiry": "Valid until 31st of December 2019",
+            "accessCode": null
+         },
+         {
+            "index": 1,
+            "type": "ELECTRONIC VERSION",
+            "entitlement": "You are entitled to download and store this Electronic version for personal use.",
+            "expiry": "Download within 500 days from 26th of April 2017",
+            "accessCode": "QQU7-3L9A-M6UG-RRVU"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "Electronic Version",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Teacher resources",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": true
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9g9",
+      "index": 7,
+      "title": "Get Psyched!",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "RESOURCES",
+            "entitlement": null,
+            "expiry": "Download within 500 days from 31st of May 2018",
+            "accessCode": "H3HG-2XJ6-7YR5-YVLV"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "ERAs",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 2,
+            "name": "Brain animation",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 3,
+            "name": "Word Activities",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 4,
+            "name": "Weblinks",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 5,
+            "name": "Teacher resources",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 6,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 7,
+            "name": "Errata",
+            "isLauncher": false,
+            "hasAccess": false
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9h9",
+      "index": 8,
+      "title": "Language Toolkit 3",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "ELECTRONIC VERSION",
+            "entitlement": "You are entitled to download and store this PDF Textbook for personal use.",
+            "expiry": "Download within 500 days from 26th of March 2018",
+            "accessCode": "K5BK-GMG6-D2UT-4UM6"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "Electronic Version",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Teacher resources",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 2,
+            "name": "About",
+            "isLauncher": true,
+            "hasAccess": true
+         }
+      ]
+   },
+   {
+      "id": "5b8ca557e44200e8395df9i9",
+      "index": 9,
+      "title": "Humanities and Social Sciences for the Australian Curriculum Year 7",
+      "expiryStatus": "available",
+      "subscription": [
+         {
+            "index": 0,
+            "type": "TEACHER RESOURCE PACKAGE",
+            "entitlement": "You are entitled to download and store this PDF Textbook for personal use.",
+            "expiry": "Valid until 31st of December 2019",
+            "accessCode": null
+         },
+         {
+            "index": 1,
+            "type": "INTERACTIVE TEXTBOOK AND PDF TEXTBOOK",
+            "entitlement": null,
+            "expiry": "Valid until 31st of December 2018",
+            "accessCode": "P9JH-DA64-5549-NMRT"
+         }
+      ],
+      "tabs": [
+         {
+            "index": 0,
+            "name": "PDF Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 1,
+            "name": "Interactive Textbook",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 2,
+            "name": "Word activities",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 3,
+            "name": "Weblinks",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 4,
+            "name": "Additional activities",
+            "isLauncher": false,
+            "hasAccess": true
+         },
+         {
+            "index": 5,
+            "name": "Teacher Resource Package",
+            "isLauncher": true,
+            "hasAccess": true
+         },
+         {
+            "index": 6,
+            "name": "Curriculum grids",
+            "isLauncher": false,
+            "hasAccess": false
+         },
+         {
+            "index": 7,
+            "name": "About",
+            "isLauncher": false,
+            "hasAccess": false
+         }
+      ]
+   }
+]
