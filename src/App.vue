@@ -1,21 +1,20 @@
 <template>
   <div>
   	<Header />
-  	<Resources />
   	<Footer />
   </div>
 </template>
 
 <script>
   import Header from '@/components/Header'
-  import Resources from '@/components/Resources'
+  import Home from '@/components/Home'
   import Footer from '@/components/Footer'
 
   export default {
     name: 'app',
     components: {
       Header,
-      Resources,
+      Home,
       Footer
     }
   }
