@@ -1,7 +1,7 @@
 <template>
 <div>
     <!-- User Component -->
-    <div class="container-fluid container-bg-1 resources-container" v-for="data in dataJson">
+    <div class="container-fluid container-bg-1 resources-container" v-for="data in dataJson" :key="data.id">
     <br><br>
         <div class="row">
             <div class="col-lg-12 col-nd-12 col-sm-12 col-xs-12">
@@ -10,7 +10,7 @@
                         <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
                             <div class="book-wrap">
                                 <div class="load cover">
-                                <img src="https://www.staging.cf.cambridge.edu.au/files/cup_content/images/titles/9781107526686_180.jpg" class="book-cover"></a></div>
+                                <img src="https://www.staging.cf.cambridge.edu.au/files/cup_content/images/titles/9781107526686_180.jpg" class="book-cover"></div>
                                 <div class="undercover" style="border-color: #5c5959;"></div>
                             </div>
                         </div>
@@ -18,7 +18,7 @@
                             <a href="/go/titles/Cambridge-Studies-of-Religion-3rd-Edition/">
                                 <h3 class="title-name">{{ data.title }}</h3>
                             </a>
-                            <div v-for="sub in data.subscription">
+                            <div v-for="sub in data.subscription" :key="sub.index">
                                 <br>
                                 <p class="subscription-p">
                                     <label>{{ sub.type }}</label>

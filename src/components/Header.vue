@@ -115,10 +115,6 @@
                 </div>
             </div>
         </div>
-        <!--- Resources Component -->
-        <div class="row">
-            <Resources v-show="$route.path === '/myresources'"/>
-        </div>
         <!--- End of You are here Home -->
         <br/>
         <!-- do not delete.  -->
@@ -137,7 +133,6 @@
   import BreadCrumbSVG from '@/assets/svgs/breadcrumb.svg'
   import Activate from './Activate'
   import ActivateLogin from './ActivateLogin'
-  import Resources from '@/components/Resources'
 
   export default {
     name: 'Header',
@@ -146,8 +141,7 @@
       SearchSVG,
       BreadCrumbSVG,
       Activate,
-      ActivateLogin,
-      Resources
+      ActivateLogin
     }
   }
 </script>
