@@ -3,6 +3,7 @@
         <Header/>
         <Sort v-show="$route.path === '/myresources'"/>
         <Resources v-show="$route.path === '/myresources'"/>
+        <Support v-show="$route.path === '/support'"/>
         <Footer/>
         <ChatBox/>
     </div>
@@ -15,6 +16,7 @@
     import Resources from '@/components/Resources'
     import Footer from '@/components/Footer'
     import ChatBox from '@/components/ChatBox'
+    import Support from '@/components/Support'
 
     export default {
         name: 'app',
@@ -24,7 +26,8 @@
             Sort,
             Resources,
             Footer,
-            ChatBox
+            ChatBox,
+            Support
         }
     }
 </script>
