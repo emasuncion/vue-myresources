@@ -1,7 +1,7 @@
 <template>
 <div>
     <!-- User Component -->
-    <div class="container-fluid container-bg-1 resources-container" v-for="(data, index) in resources" :key="data.id">
+    <div class="container-fluid container-bg-1 resources-container" v-for="data in resources" :key="data.id">
     <br><br>
         <div class="row">
             <div class="col-lg-12 col-nd-12 col-sm-12 col-xs-12">
@@ -13,13 +13,12 @@
                                 <img src="https://www.staging.cf.cambridge.edu.au/files/cup_content/images/titles/9781107526686_180.jpg" class="book-cover"></div>
                                 <div class="undercover" style="border-color: #5c5959;"></div>
                             </div>
-                            <a class="btn btn-danger btn-block go-btn" href="#" v-if="data.expiryStatus === 'expired'"> PURCHASE? </a>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12 rsrc-display">
                             <a :href="'/go/titles/' + data.title.split(' ').join('-')">
-                                <h3 class="title-name" v-bind:class="[data.expiryStatus === 'expired' ? 'expired': '']">{{ data.title }}</h3>
+                                <h3 class="title-name">{{ data.title }}</h3>
                             </a>
-                            <div v-if="data.expiryStatus !== 'expired'" v-for="sub in data.subscription" :key="sub.index">
+                            <div v-for="sub in data.subscription" :key="sub.index">
                                 <br>
                                 <p class="subscription-p">
                                     <label>{{ sub.type }}</label>
@@ -33,25 +32,8 @@
                             </div>
                             <!-- View all Resources -->
 
-                        <!-- Right Handside Launcher -->
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-if="data.expiryStatus === 'expired'">
-                            <a class="expired resource-action" href="#" @click="deleteResource(index)">
-                                <span class="svg-text delete_resource" style="margin-right:13px">Delete Resource</span>
-                                <svg>
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-delete">
-                                        <svg id="icon-delete" viewBox="0 0 32 32" width="100%" height="100%"><title>delete</title> 
-                                            <g id="delete-icons"> 
-                                                <g> 
-                                                    <path d="M25,8H13.8c-0.5,0-1,0.2-1.4,0.6L5,16l7.4,7.4c0.4,0.4,0.9,0.6,1.4,0.6H25c1.1,0,2-0.9,2-2V10
-                    C27,8.9,26.1,8,25,8z M23,19l-1,1l-3-3l-3,3l-1-1l3-3l-3-3l1-1l3,3l3-3l1,1l-3,3L23,19z" fill="#FA6060"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </use>
-                                </svg>
-                            </a>
-                        </div>
+                            <!-- Right Handside Launcher -->
                     </div>
                 </div>
             </div>
@@ -73,7 +55,7 @@
                 resources: [],
                 loading: false,
                 spinner,
-                sessionData: dataJson // dataJson for current session only
+                sortJson: dataJson
             }
         },
         methods: {
@@ -85,7 +67,7 @@
                 return bottomOfPage || pageHeight < visible
             },
             addResources(count) {
-                if (this.resources.length >= this.sessionData.length){
+                if (this.resources.length >= dataJson.length){
                     this.loading = false;
                     return;
                 }
@@ -94,17 +76,13 @@
                 setTimeout(()=> {
                     if (count > 1) {
                         for (let i = this.resources.length; i < count; i++) {
-                            this.resources.push(this.sessionData[i])
+                            this.resources.push(dataJson[i])
                         }
                     } else {
-                        this.resources.push(this.sessionData[this.resources.length])
+                        this.resources.push(dataJson[this.resources.length])
                     }
                     this.loading = false
                 }, 100)
-            },
-            deleteResource(index) {
-                this.resources.splice(index, 1) // update data to be displayed
-                this.sessionData.splice(index, 1) // update current session's dataJson
             }
         },
         watch: {
