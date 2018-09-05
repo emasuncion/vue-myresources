@@ -1,7 +1,7 @@
 <template>
 <div>
     <!-- User Component -->
-    <div class="container-fluid container-bg-1 resources-container" v-for="data in dataJson" :key="data.id">
+    <div class="container-fluid container-bg-1 resources-container" v-for="data in resources" :key="data.id">
     <br><br>
         <div class="row">
             <div class="col-lg-12 col-nd-12 col-sm-12 col-xs-12">
@@ -46,11 +46,49 @@
 <script>
     import dataJson from '../assets/myresources.json'
 
-    export default{
-          data(){
-              return{
-                  dataJson
-              }
-          }
-      }
+    export default {
+        data() {
+            return{
+                bottom: false,
+                resources: []
+            }
+        },
+        methods: {
+            bottomVisible() {
+                const scrollY = window.scrollY
+                const visible = document.documentElement.clientHeight
+                const pageHeight = document.documentElement.scrollHeight
+                const bottomOfPage = visible + scrollY >= pageHeight
+                return bottomOfPage || pageHeight < visible
+            },
+            addResources(count) {
+                if (this.resources.length >= dataJson.length){
+                    return;
+                }
+
+                if (count > 1) {
+                    for (let i = this.resources.length; i < count; i++) {
+                        this.resources.push(dataJson[i])
+                    }
+                    return;
+                } 
+
+                this.resources.push(dataJson[this.resources.length])
+            }
+        },
+        watch: {
+            bottom(bottom) {
+                if (bottom) {
+                    this.addResources(1)
+                }
+            }
+        },
+        created() {
+            window.addEventListener('scroll', () => {
+              this.bottom = this.bottomVisible()
+            })
+            // load 5 initial resources
+            this.addResources(5)
+        }
+    }
 </script>
