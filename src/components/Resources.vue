@@ -74,7 +74,8 @@
                 resources: [],
                 loading: false,
                 spinner,
-                sessionData: dataJson // dataJson for current session only
+                sessionData: dataJson, // dataJson for current session only
+                sortJson: dataJson
             }
         },
         methods: {
