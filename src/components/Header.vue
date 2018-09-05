@@ -51,7 +51,6 @@
                         </li>
 
                         <li>
-                            <!-- ANZGO-3725 Modified by Shane Camus 05/17/18 -->
                             <a href="https://cambridge.edu.au/education/"
                                target="_blank"
                                rel="noopener noreferrer"

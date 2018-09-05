@@ -15,7 +15,7 @@
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12 rsrc-display">
-                            <a href="/go/titles/Cambridge-Studies-of-Religion-3rd-Edition/">
+                            <a :href="'/go/titles/' + data.title.split(' ').join('-')">
                                 <h3 class="title-name">{{ data.title }}</h3>
                             </a>
                             <div v-for="sub in data.subscription" :key="sub.index">
