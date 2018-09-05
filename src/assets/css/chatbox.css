@@ -1,0 +1,10 @@
+#rebotifyChatboxIconCustom {
+    position: fixed;
+    right: 45px;
+    bottom: -20px;
+    z-index: 99;
+    padding-left: 0px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 48px;
+}

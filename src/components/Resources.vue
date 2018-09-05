@@ -67,6 +67,7 @@
     import spinner from '../assets/svgs/load.gif'
 
     export default {
+        name: 'Resources',
         data() {
             return {
                 bottom: false,
@@ -86,8 +87,8 @@
             },
             addResources(count) {
                 if (this.resources.length >= this.sessionData.length){
-                    this.loading = false;
-                    return;
+                    this.loading = false
+                    return
                 }
 
                 this.loading = true
