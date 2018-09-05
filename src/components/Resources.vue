@@ -40,17 +40,21 @@
         </div>
         <br><br>
     </div>
+    <div class="text-center" v-show="loading"><img :src="spinner"/></div>
 </div>    
 </template>
 
 <script>
     import dataJson from '../assets/myresources.json'
+    import spinner from '../assets/svgs/load.gif'
 
     export default {
         data() {
-            return{
+            return {
                 bottom: false,
-                resources: []
+                resources: [],
+                loading: false,
+                spinner
             }
         },
         methods: {
@@ -63,17 +67,21 @@
             },
             addResources(count) {
                 if (this.resources.length >= dataJson.length){
+                    this.loading = false;
                     return;
                 }
 
-                if (count > 1) {
-                    for (let i = this.resources.length; i < count; i++) {
-                        this.resources.push(dataJson[i])
+                this.loading = true
+                setTimeout(()=> {
+                    if (count > 1) {
+                        for (let i = this.resources.length; i < count; i++) {
+                            this.resources.push(dataJson[i])
+                        }
+                    } else {
+                        this.resources.push(dataJson[this.resources.length])
                     }
-                    return;
-                } 
-
-                this.resources.push(dataJson[this.resources.length])
+                    this.loading = false
+                }, 100)
             }
         },
         watch: {
