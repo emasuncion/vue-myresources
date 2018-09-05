@@ -1400,3 +1400,16 @@ div#header-login {
 .title-name {
     color: #4D4D4D;
 }
+
+h3.expired {
+    color: #CCCCCC !important;
+}
+
+.delete_resource {
+    color: #FA6464 !important;
+    text-decoration: none !important;
+}
+
+a.expired.resource-action:hover {
+    text-decoration: none !important;
+}
