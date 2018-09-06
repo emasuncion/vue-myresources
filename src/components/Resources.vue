@@ -87,20 +87,21 @@
                 return bottomOfPage || pageHeight < visible
             },
             addResources(count) {
-                if (this.resources.length >= this.sessionData.length){
+                const remaining = this.sessionData.length - this.resources.length
+                if (remaining <= 0) {
                     this.loading = false
                     return
                 }
 
                 this.loading = true
+                const numberOfItemsToAdd = remaining < count ? remaining : count
+                const listCount = this.resources.length + numberOfItemsToAdd
+
                 setTimeout(()=> {
-                    if (count > 1) {
-                        for (let i = this.resources.length; i < count; i++) {
-                            this.resources.push(this.sessionData[i])
-                        }
-                    } else {
-                        this.resources.push(this.sessionData[this.resources.length])
+                    for (let i = this.resources.length; i < listCount; i++) {
+                        this.resources.push(this.sessionData[i])
                     }
+
                     this.loading = false
                 }, 100)
             },
@@ -112,7 +113,8 @@
         watch: {
             bottom(bottom) {
                 if (bottom) {
-                    this.addResources(1)
+                    const addItemCount = 2
+                    this.addResources(addItemCount)
                 }
             }
         },
@@ -120,8 +122,9 @@
             window.addEventListener('scroll', () => {
               this.bottom = this.bottomVisible()
             })
-            // load 5 initial resources
-            this.addResources(4)
+
+            const initialItemCount = 4
+            this.addResources(initialItemCount)
         }
     }
 </script>
