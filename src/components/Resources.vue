@@ -28,7 +28,7 @@
                                     {{ sub.entitlement }}
                                 </p>
                                 <p>
-                                    <strong> {{ sub.expiry }} </strong> <e v-if="sub.accessCode !== null"> ({{ sub.accessCode }}) </e>
+                                    <strong> {{ sub.expiry }} </strong> <span v-if="sub.accessCode !== null"> ({{ sub.accessCode }}) </span>
                                 </p>    
                             </div>
                             <!-- View all Resources -->
@@ -121,7 +121,7 @@
               this.bottom = this.bottomVisible()
             })
             // load 5 initial resources
-            this.addResources(5)
+            this.addResources(4)
         }
     }
 </script>

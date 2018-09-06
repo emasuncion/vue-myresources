@@ -28,6 +28,16 @@
             Footer,
             ChatBox,
             Support
+        },
+        methods: {
+            goToTop() {
+                window.scrollTo(0, 0)
+            }
+        },
+        watch: {
+            '$route' () {
+                this.goToTop()
+            }
         }
     }
 </script>

@@ -4,6 +4,7 @@
 */
 /* OVERRIDES */
 body {
+    overflow-x: hidden;
     color: #4D4D4D !important;
     padding: 0px 0px 0px 0px;
     margin-bottom: 0px !important;
