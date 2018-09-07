@@ -74,8 +74,10 @@
                                      href="/user_landing"
                                      class="btn btn-success btn-block btn-black-text front-ajax-btn"
                                      style="text-align:left;font-size: 16px;">
-                                    <LoginSVG/>
-                                    <span class="svg-text">Vue Group</span>
+                                    <PadlockSVG v-if="$route.path === '/'"/>
+                                    <LoginSVG v-else/>
+                                    <span v-if="$route.path === '/'" class="svg-text">Login</span>
+                                    <span v-else class="svg-text">Vue Group</span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -110,7 +112,7 @@
                     <div class="row">
                         <Activate v-show="$route.path === '/myresources'"/>
                         <ActivateLogin v-show="$route.path === '/'" />
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,6 +130,7 @@
 
 <script>
   import LoginSVG from '@/assets/svgs/login.svg'
+  import PadlockSVG from '@/assets/svgs/padlock.svg'
   import SearchSVG from '@/assets/svgs/search.svg'
   import BreadCrumbSVG from '@/assets/svgs/breadcrumb.svg'
   import Activate from './Activate'
@@ -140,7 +143,8 @@
       SearchSVG,
       BreadCrumbSVG,
       Activate,
-      ActivateLogin
+      ActivateLogin,
+      PadlockSVG
     }
   }
 </script>

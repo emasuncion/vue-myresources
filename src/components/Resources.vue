@@ -71,12 +71,20 @@
         data() {
             return {
                 bottom: false,
-                resources: this.$store.state.resources,
+                // resources: this.$store.state.resources,
                 loading: false,
                 spinner,
                 sessionData: this.$store.state.sessionData, // dataJson for current session only
                 sortJson: this.$store.state.sortJson
             }
+        },
+        created() {
+            window.addEventListener('scroll', () => {
+              this.bottom = this.bottomVisible()
+            })
+
+            const initialItemCount = 4
+            this.addResources(initialItemCount)
         },
         methods: {
             bottomVisible() {
@@ -87,7 +95,7 @@
                 return bottomOfPage || pageHeight < visible
             },
             addResources(count) {
-                const remaining = this.$store.state.sessionData.length - this.$store.state.resources.length
+                const remaining = this.sessionData.length - this.resources.length
                 if (remaining <= 0) {
                     this.loading = false
                     return
@@ -95,19 +103,17 @@
 
                 this.loading = true
                 const numberOfItemsToAdd = remaining < count ? remaining : count
-                const listCount = this.$store.state.resources.length + numberOfItemsToAdd
+                const listCount = this.resources.length + numberOfItemsToAdd
 
                 setTimeout(()=> {
-                    for (let i = this.$store.state.resources.length; i < listCount; i++) {
-                        this.$store.commit('addResource', this.$store.state.sessionData[i])
+                    for (let i = this.resources.length; i < listCount; i++) {
+                        this.$store.commit('addResource', this.sessionData[i])
                     }
 
                     this.loading = false
                 }, 100)
             },
             deleteResource(index) {
-                //this.resources.splice(index, 1) // update data to be displayed
-                //this.sessionData.splice(index, 1) // update current session's dataJson
                 this.$store.commit('deleteResource', index)
             }
         },
@@ -119,13 +125,10 @@
                 }
             }
         },
-        created() {
-            window.addEventListener('scroll', () => {
-              this.bottom = this.bottomVisible()
-            })
-
-            const initialItemCount = 4
-            this.addResources(initialItemCount)
+        computed: {
+            resources: function() {
+                return this.$store.state.resources
+            }
         }
     }
 </script>

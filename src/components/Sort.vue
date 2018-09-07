@@ -50,11 +50,11 @@
             },
             sortAZ(){
                 document.getElementById('textArrange').innerHTML='A - Z';
-                let size = this.$store.state.resources.length
-                this.$store.commit('sortAsc', size)
+                this.$store.commit('sortAZ')
             },
             sortZA(){
                 document.getElementById('textArrange').innerHTML='Z - A';
+                this.$store.commit('sortZA')
             },
             sortOldNew(){
                 document.getElementById('textArrange').innerHTML='Oldest - newest';

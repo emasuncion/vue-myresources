@@ -18,16 +18,15 @@ export default new Vuex.Store({
             state.resources.splice(data, 1)
             state.sessionData.splice(data, 1)
         },
-        sortAsc(state) {
-            // sort the array accdg to selected type
-            state.resources.sort(function (a, b) {
+        sortAZ(state) {
+            state.resources = state.sortJson.sort(function(a, b) {
                 return a.title > b.title
             })
-        }
-    },
-    actions: {
-        sortAsc(context) {
-            context.commit('')
+        },
+        sortZA(state) {
+            state.resources = state.sortJson.sort(function(a, b) {
+                return a.title < b.title
+            })
         }
     }
 })
