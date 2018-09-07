@@ -28,8 +28,8 @@
                                     {{ sub.entitlement }}
                                 </p>
                                 <p>
-                                    <strong> {{ sub.expiry }} </strong> <span v-if="sub.accessCode !== null"> ({{ sub.accessCode }}) </span>
-                                </p>    
+                                    <strong> {{ sub.expiry }} </strong><span v-if="sub.accessCode !== null"> ({{ sub.accessCode }}) </span>
+                                </p>
                             </div>
                             <!-- View all Resources -->
 
@@ -40,9 +40,9 @@
                                 <span class="svg-text delete_resource" style="margin-right:13px">Delete Resource</span>
                                 <svg>
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-delete">
-                                        <svg id="icon-delete" viewBox="0 0 32 32" width="100%" height="100%"><title>delete</title> 
-                                            <g id="delete-icons"> 
-                                                <g> 
+                                        <svg id="icon-delete" viewBox="0 0 32 32" width="100%" height="100%"><title>delete</title>
+                                            <g id="delete-icons">
+                                                <g>
                                                     <path d="M25,8H13.8c-0.5,0-1,0.2-1.4,0.6L5,16l7.4,7.4c0.4,0.4,0.9,0.6,1.4,0.6H25c1.1,0,2-0.9,2-2V10
                     C27,8.9,26.1,8,25,8z M23,19l-1,1l-3-3l-3,3l-1-1l3-3l-3-3l1-1l3,3l3-3l1,1l-3,3L23,19z" fill="#FA6060"></path>
                                                 </g>
@@ -59,11 +59,11 @@
         <br><br>
     </div>
     <div class="text-center" v-show="loading"><img :src="spinner"/></div>
-</div>    
+</div>
 </template>
 
 <script>
-    import dataJson from '../assets/myresources.json'
+    // import dataJson from '../assets/myresources.json'
     import spinner from '../assets/svgs/load.gif'
 
     export default {
@@ -71,11 +71,11 @@
         data() {
             return {
                 bottom: false,
-                resources: [],
+                resources: this.$store.state.resources,
                 loading: false,
                 spinner,
-                sessionData: dataJson, // dataJson for current session only
-                sortJson: dataJson
+                sessionData: this.$store.state.sessionData, // dataJson for current session only
+                sortJson: this.$store.state.sortJson
             }
         },
         methods: {
@@ -87,7 +87,7 @@
                 return bottomOfPage || pageHeight < visible
             },
             addResources(count) {
-                const remaining = this.sessionData.length - this.resources.length
+                const remaining = this.$store.state.sessionData.length - this.$store.state.resources.length
                 if (remaining <= 0) {
                     this.loading = false
                     return
@@ -95,19 +95,20 @@
 
                 this.loading = true
                 const numberOfItemsToAdd = remaining < count ? remaining : count
-                const listCount = this.resources.length + numberOfItemsToAdd
+                const listCount = this.$store.state.resources.length + numberOfItemsToAdd
 
                 setTimeout(()=> {
-                    for (let i = this.resources.length; i < listCount; i++) {
-                        this.resources.push(this.sessionData[i])
+                    for (let i = this.$store.state.resources.length; i < listCount; i++) {
+                        this.$store.commit('addResource', this.$store.state.sessionData[i])
                     }
 
                     this.loading = false
                 }, 100)
             },
             deleteResource(index) {
-                this.resources.splice(index, 1) // update data to be displayed
-                this.sessionData.splice(index, 1) // update current session's dataJson
+                //this.resources.splice(index, 1) // update data to be displayed
+                //this.sessionData.splice(index, 1) // update current session's dataJson
+                this.$store.commit('deleteResource', index)
             }
         },
         watch: {

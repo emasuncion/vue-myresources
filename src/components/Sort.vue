@@ -36,7 +36,7 @@
 </template>
 
 <script>
-    import dataJson from '../assets/myresources.json'
+    // import dataJson from '../assets/myresources.json'
     export default {
         name: 'Sort',
         methods: {
@@ -50,6 +50,8 @@
             },
             sortAZ(){
                 document.getElementById('textArrange').innerHTML='A - Z';
+                let size = this.$store.state.resources.length
+                this.$store.commit('sortAsc', size)
             },
             sortZA(){
                 document.getElementById('textArrange').innerHTML='Z - A';
