@@ -47,7 +47,7 @@
                             </div>
                             <!-- View all Resources -->
 
-                        <!-- Right Handside Launcher -->
+                        <!-- Expiry -->
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-if="data.expiryStatus === 'expired'">
                             <a class="expired resource-action" href="#" @click="deleteResource(index)">
@@ -65,6 +65,16 @@
                                     </use>
                                 </svg>
                             </a>
+                        </div>
+
+                        <!-- Right Handside Launcher -->
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-else>
+                            <span v-for="(tabs, index) in data.tabs" :key="tabs.index">
+                                <a v-if="tabs.isLauncher === true"
+                                    class="btn btn-default btn-block go-resource-btn edu-green edu-green-pdf edu-downloadables">
+                                    {{ tabs.name }}
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>

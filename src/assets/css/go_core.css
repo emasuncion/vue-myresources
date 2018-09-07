@@ -340,9 +340,10 @@ polygon {
     background-position: 2% 50%;
 }
 
-/*.edu-green-pdf{
-  background-image: url("../elements/svgs/edu_green_pdf.svg");
+.edu-green-pdf{
+  background-image: url("~@/assets/svgs/edu_green_pdf.png");
 }
+/*
 .edu-green-dt{
   background-image: url("../elements/svgs/edu_green_dt.svg");
 }
