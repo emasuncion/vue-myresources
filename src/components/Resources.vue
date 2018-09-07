@@ -30,6 +30,20 @@
                                 <p>
                                     <strong> {{ sub.expiry }} </strong><span v-if="sub.accessCode !== null"> ({{ sub.accessCode }}) </span>
                                 </p>
+                                <div class="view-all-resources" @click="showResourcesPanel(data.id)">
+                                    <a class="toggle-rsrc-panel">
+                                        <img class=view-all-png src="@/assets/svgs/view_all.png"/>
+                                        <span class="svg-text">View All Resources</span>
+                                    </a>
+                                    <div class="panel" id="show-panel">
+                                        <div class="panel-body" style="display: none" v-bind:id="'panel-body-'+data.id">
+                                            <ul id="show-panel-resources" 
+                                                v-for="(tabs, index) in data.tabs" :key="tabs.index">
+                                                <li>{{ tabs.name }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- View all Resources -->
 
@@ -115,6 +129,14 @@
             },
             deleteResource(index) {
                 this.$store.commit('deleteResource', index)
+            },
+            showResourcesPanel(id){
+                var panel = document.getElementById("panel-body-"+id);
+                    if(panel.style.display == "none"){
+                        panel.style.display="block";
+                    } else{
+                        panel.style.display="none";
+                    }
             }
         },
         watch: {

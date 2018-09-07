@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-2" id="cookie-info-dismiss-div"
                                      @click="hideCookies">
-                                    <a href="#" id="dismiss-cookie" class="pull-right" style="color:white;">
+                                    <a id="dismiss-cookie" class="pull-right" style="color:white;">
                                         <span class="svg-text" id="cookie-info-dismiss-text">Dismiss</span>
                                         <DismissSVG id="dismiss-cookie-svg" style="margin-left: 2px;"/>
                                     </a>

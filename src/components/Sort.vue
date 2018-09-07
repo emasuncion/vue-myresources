@@ -12,8 +12,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right">
                                 <div class="go-dropdown" @click="showArrange">
-                                    <!-- <input type="hidden" name="sort" value="<?php echo $arrange; ?>"> -->
-                                    <a href="#" class="btn btn-default">
+                                    <a class="btn btn-default">
                                         <img src="@/assets/svgs/arrange.png"/>
                                         <span id="textArrange">Arrange</span>
                                         <img src="@/assets/svgs/arrow_down.png"

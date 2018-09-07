@@ -93,6 +93,12 @@ polygon {
 .svg-text {
     bottom: 5px;
     position: relative;
+    cursor: pointer;
+}
+
+.view-all-png{
+    bottom: 6px;
+    position: relative;
 }
 
 .svg-text-mid {
@@ -453,6 +459,10 @@ polygon {
 
 .panel-default {
     background-color: transparent;
+    position: relative;
+    width: 95%;
+    display: block;
+    z-index: 10;
 }
 
 .btn-black-text {
@@ -1134,6 +1144,7 @@ ul.show-options {
 
 .toggle-rsrc-panel {
     text-decoration: none !important;
+    cursor: pointer;
 }
 
 .resource-tabs {
@@ -1216,6 +1227,7 @@ ul.show-options {
 
     #cookie-info-dismiss-text {
         display: none;
+        cursor: pointer;
     }
 
     #cookie-info-warning-sign {
@@ -1413,4 +1425,5 @@ h3.expired {
 
 a.expired.resource-action:hover {
     text-decoration: none !important;
+    cursor: pointer;
 }
