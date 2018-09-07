@@ -10,7 +10,7 @@
                         <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
                             <div class="book-wrap">
                                 <div class="load cover">
-                                <img src="https://www.staging.cf.cambridge.edu.au/files/cup_content/images/titles/9781107526686_180.jpg" class="book-cover"></div>
+                                <img :src="data.imgSrc" class="book-cover"></div>
                                 <div class="undercover" style="border-color: #5c5959;"></div>
                             </div>
                             <a class="btn btn-danger btn-block go-btn" href="#" v-if="data.expiryStatus === 'expired'"> PURCHASE? </a>

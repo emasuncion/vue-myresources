@@ -30,7 +30,7 @@
             </nav>
         </div>
 
-        <div id="cookie-info" class="navbar-inverse go-footer" style="display: none;">
+        <div id="cookie-info" class="navbar-inverse go-footer cookie-info" style="display: none;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
@@ -38,9 +38,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10" id="cookie-info-warning">
                                     <h1 style="color:white;">
-                                        <svg id="cookie-info-warning-sign">
-                                            <use xlink:href="#icon-cookies"></use>
-                                        </svg>
+                                        <IWhiteSVG/>
                                         <span class="svg-text"
                                               id="cookie-info-warning-text">Cambridge GO uses cookies</span>
                                     </h1>
@@ -49,9 +47,7 @@
                                      @click="hideCookies">
                                     <a href="#" id="dismiss-cookie" class="pull-right" style="color:white;">
                                         <span class="svg-text" id="cookie-info-dismiss-text">Dismiss</span>
-                                        <svg style="margin-left: 2px;" id="dismiss-cookie-svg">
-                                            <use xlink:href="#icon-dismiss"></use>
-                                        </svg>
+                                        <DismissSVG id="dismiss-cookie-svg" style="margin-left: 2px;"/>
                                     </a>
                                 </div>
                             </div>
@@ -79,8 +75,14 @@
 </template>
 
 <script>
+    import DismissSVG from '@/assets/svgs/dismiss.svg'
+    import IWhiteSVG from '@/assets/svgs/iWhite.svg'
   export default {
     name: 'Footer',
+    components: {
+        DismissSVG,
+        IWhiteSVG
+    },
     methods: {
       showCookies () {
         document.getElementById('cookie-info').style.display = 'block'
