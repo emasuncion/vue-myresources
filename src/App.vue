@@ -1,6 +1,9 @@
 <template>
     <div>
-        <Header/>
+        <Header v-if="$route.path === '/myresources'"/>
+        <Header v-if="$route.path === '/'"/>
+        <ModalHeader v-if="$route.path === '/go/activate/'"/>
+        <ModalHeader v-if="$route.path === '/contact'"/>
         <Sort v-show="$route.path === '/myresources'"/>
         <Resources v-show="$route.path === '/myresources'"/>
         <Support v-show="$route.path === '/support'"/>
@@ -17,6 +20,7 @@
     import Footer from '@/components/Footer'
     import ChatBox from '@/components/ChatBox'
     import Support from '@/components/Support'
+    import ModalHeader from '@/components/ModalHeader'
 
     export default {
         name: 'app',
@@ -27,7 +31,8 @@
             Resources,
             Footer,
             ChatBox,
-            Support
+            Support,
+            ModalHeader
         },
         methods: {
             goToTop() {

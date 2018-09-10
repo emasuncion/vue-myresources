@@ -192,6 +192,7 @@ polygon {
     margin-bottom: -50px;
     background-color: #F2F2F2;
     z-index: 1000;
+    height: 400;
 }
 
 .breadcrumb {
