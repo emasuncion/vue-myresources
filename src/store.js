@@ -38,6 +38,26 @@ export default new Vuex.Store({
             for (let i = 0; i < state.initialItemCount; i++) {
                 state.resources.push(state.sessionData[i])
             }
+        },
+        sortOldNew(state) {
+            state.resources = state.sortJson.sort(function(a, b) {
+                return new Date(a.date) - new Date(b.date);
+            })
+
+            state.resources = []
+            for (let i = 0; i < state.initialItemCount; i++) {
+                state.resources.push(state.sessionData[i])
+            }
+        },
+        sortNewOld(state) {
+            state.resources = state.sortJson.sort(function(a, b) {
+                return new Date(b.date) - new Date(a.date);
+            })
+
+            state.resources = []
+            for (let i = 0; i < state.initialItemCount; i++) {
+                state.resources.push(state.sessionData[i])
+            }
         }
     }
 })

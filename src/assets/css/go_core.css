@@ -460,10 +460,10 @@ polygon {
 
 .panel-default {
     background-color: transparent;
-    position: relative;
-    width: 95%;
-    display: block;
-    z-index: 10;
+}
+
+.panel-default-size{
+    width:400px;
 }
 
 .btn-black-text {
@@ -1241,6 +1241,16 @@ ul.show-options {
     #cookie-info-warning-text {
         font-size: 16px;
     }
+}
+
+#dismiss-cookie-svg{
+        cursor: pointer;
+}
+
+#cookie-point{
+    position:relative;
+    bottom:3px;
+    right:4px;
 }
 
 .icon {

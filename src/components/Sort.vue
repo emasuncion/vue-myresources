@@ -1,5 +1,5 @@
 <template>
-    <div>
+<div>
         <div class="container-fluid container-bg-1 resources-container">
             <br/>
             <div class="row">
@@ -30,8 +30,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>  
+</div>
 </template>
 
 <script>
@@ -49,17 +49,20 @@
             },
             sortAZ(){
                 document.getElementById('textArrange').innerHTML='A - Z';
-                this.$store.commit('sortAZ')
+                this.$store.commit('sortAZ');
+
             },
             sortZA(){
                 document.getElementById('textArrange').innerHTML='Z - A';
-                this.$store.commit('sortZA')
+                this.$store.commit('sortZA');
             },
             sortOldNew(){
                 document.getElementById('textArrange').innerHTML='Oldest - newest';
+                this.$store.commit('sortOldNew');
             },
             sortNewOld(){
                 document.getElementById('textArrange').innerHTML='Newest - oldest';
+                this.$store.commit('sortNewOld');
             }
         }
     }

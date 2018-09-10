@@ -38,7 +38,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10" id="cookie-info-warning">
                                     <h1 style="color:white;">
-                                        <IWhiteSVG/>
+                                        <IWhiteSVG id="cookie-point" style="margin-left: 2px;"/>
                                         <span class="svg-text"
                                               id="cookie-info-warning-text">Cambridge GO uses cookies</span>
                                     </h1>

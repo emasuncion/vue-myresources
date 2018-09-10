@@ -30,27 +30,26 @@
                                 <p>
                                     <strong> {{ sub.expiry }} </strong><span v-if="sub.accessCode !== null"> ({{ sub.accessCode }}) </span>
                                 </p>
-                                <div class="view-all-resources" @click="showResourcesPanel(data.id)">
-                                    <a class="toggle-rsrc-panel">
-                                        <img class=view-all-png src="@/assets/svgs/view_all.png"/>
-                                        <span class="svg-text">View All Resources</span>
-                                    </a>
-                                    <div class="panel" id="show-panel">
-                                        <div class="panel-body" style="display: none" v-bind:id="'panel-body-'+data.id">
-                                            <ul id="show-panel-resources" 
-                                                v-for="tabs in data.tabs" :key="tabs.index">
-                                                <li>{{ tabs.name }}</li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            <!-- View all Resources -->
+                            <div class="view-all-resources" v-if="data.expiryStatus === 'available'">
+                                <a class="toggle-rsrc-panel" @click="showResourcesPanel(data.id)">
+                                    <img class=view-all-png src="@/assets/svgs/view_all.png"/>
+                                    <span class="svg-text">View All Resources</span>
+                                </a>
+                                <div class="panel panel-default panel-default-size" style="display: none" v-bind:id="'panel-'+data.id">
+                                    <div class="panel-body">
+                                        <ul v-for="(tabs) in data.tabs" :key="tabs.index">
+                                            <li>{{ tabs.name }}</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <!-- View all Resources -->
 
                         <!-- Expiry -->
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-if="data.expiryStatus === 'expired'">
-                            <a class="expired resource-action" href="#" @click="deleteResource(index)">
+                            <a class="expired resource-action" @click="deleteResource(index)">
                                 <span class="svg-text delete_resource" style="margin-right:13px">Delete Resource</span>
                                 <svg>
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-delete">
@@ -69,7 +68,7 @@
 
                         <!-- Right Handside Launcher -->
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-else>
-                            <span v-for="tabs in data.tabs" :key="tabs.index">
+                            <span v-for="(tabs) in data.tabs" :key="tabs.index">
                                 <a v-if="tabs.isLauncher === true"
                                     class="btn btn-default btn-block go-resource-btn edu-green edu-green-pdf edu-downloadables">
                                     {{ tabs.name }}
@@ -107,7 +106,8 @@
               this.bottom = this.bottomVisible()
             })
 
-            this.addResources(this.$store.state.initialItemCount)
+            const initialItemCount = 4
+            this.addResources(initialItemCount)
         },
         methods: {
             bottomVisible() {
@@ -139,13 +139,13 @@
             deleteResource(index) {
                 this.$store.commit('deleteResource', index)
             },
-            showResourcesPanel(id) {
-                var panel = document.getElementById("panel-body-" + id)
-                if (panel.style.display === "none") {
-                    panel.style.display = "block";
-                } else {
-                    panel.style.display = "none";
-                }
+            showResourcesPanel(id){
+                var panel = document.getElementById("panel-"+id);
+                    if(panel.style.display == "none"){
+                        panel.style.display="block";
+                    } else{
+                        panel.style.display="none";
+                    }
             }
         },
         watch: {
