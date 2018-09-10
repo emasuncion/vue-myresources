@@ -462,10 +462,6 @@ polygon {
     background-color: transparent;
 }
 
-.panel-default-size{
-    width:400px;
-}
-
 .btn-black-text {
     color: black !important;
 }
@@ -1150,6 +1146,8 @@ ul.show-options {
 
 .resource-tabs {
     font-weight: 200;
+    margin-bottom: -10px;
+    cursor: pointer;
 }
 
 .glyphicon.spinning {

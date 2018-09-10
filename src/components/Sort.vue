@@ -35,34 +35,33 @@
 </template>
 
 <script>
-    // import dataJson from '../assets/myresources.json'
     export default {
         name: 'Sort',
         methods: {
             showArrange() {
-                document.getElementById("arrange-info").classList.toggle("show-options");
-                var arrowDown = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAIVBMVEUAAAB0dHR3d3d4eHh3d3d3d3d2dnZ3d3d3d3d3d3f///8pOBamAAAACXRSTlMACytgn6Wm1fRZyZqwAAAAAWJLR0QKaND0VgAAAD5JREFUKM9jYBhuIHMmEExFEhAHCRQiCTB1zpw5QwFZj+XMmZNRDGGZOdMBRYCxcroAqj0aTWgWMxswDD8AAFwpDjZXZoSWAAAAAElFTkSuQmCC";
-                var arrowUp =  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAIVBMVEUAAAB0dHR3d3d4eHh3d3d4eHh3d3d3d3d3d3d3d3f///9uTQU6AAAACXRSTlMACytZWmCf1fQxYGtVAAAAAWJLR0QKaND0VgAAADxJREFUKM9jYBh+gMUAymCC0ipBqAKMgaICKAKsCkwBKALBDAymyAJMQCOZFZAEQAYwBiIJgK1QHXZhCQCdAgNy3U/4xwAAAABJRU5ErkJggg==";
-                var changeImg = document.getElementById("arrow");
+                document.getElementById("arrange-info").classList.toggle("show-options")
+                var arrowDown = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAIVBMVEUAAAB0dHR3d3d4eHh3d3d3d3d2dnZ3d3d3d3d3d3f///8pOBamAAAACXRSTlMACytgn6Wm1fRZyZqwAAAAAWJLR0QKaND0VgAAAD5JREFUKM9jYBhuIHMmEExFEhAHCRQiCTB1zpw5QwFZj+XMmZNRDGGZOdMBRYCxcroAqj0aTWgWMxswDD8AAFwpDjZXZoSWAAAAAElFTkSuQmCC"
+                var arrowUp =  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAIVBMVEUAAAB0dHR3d3d4eHh3d3d4eHh3d3d3d3d3d3d3d3f///9uTQU6AAAACXRSTlMACytZWmCf1fQxYGtVAAAAAWJLR0QKaND0VgAAADxJREFUKM9jYBh+gMUAymCC0ipBqAKMgaICKAKsCkwBKALBDAymyAJMQCOZFZAEQAYwBiIJgK1QHXZhCQCdAgNy3U/4xwAAAABJRU5ErkJggg=="
+                var changeImg = document.getElementById("arrow")
 
-                changeImg.src = (changeImg.src==arrowDown)? arrowUp : arrowDown;
+                changeImg.src = (changeImg.src==arrowDown)? arrowUp : arrowDown
             },
-            sortAZ(){
-                document.getElementById('textArrange').innerHTML='A - Z';
-                this.$store.commit('sortAZ');
+            sortAZ() {
+                document.getElementById('textArrange').innerHTML='A - Z'
+                this.$store.commit('sortAZ')
 
             },
-            sortZA(){
-                document.getElementById('textArrange').innerHTML='Z - A';
-                this.$store.commit('sortZA');
+            sortZA() {
+                document.getElementById('textArrange').innerHTML='Z - A'
+                this.$store.commit('sortZA')
             },
-            sortOldNew(){
-                document.getElementById('textArrange').innerHTML='Oldest - newest';
-                this.$store.commit('sortOldNew');
+            sortOldNew() {
+                document.getElementById('textArrange').innerHTML='Oldest - newest'
+                this.$store.commit('sortOldNew')
             },
-            sortNewOld(){
-                document.getElementById('textArrange').innerHTML='Newest - oldest';
-                this.$store.commit('sortNewOld');
+            sortNewOld() {
+                document.getElementById('textArrange').innerHTML='Newest - oldest'
+                this.$store.commit('sortNewOld')
             }
         }
     }

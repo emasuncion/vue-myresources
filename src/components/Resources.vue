@@ -13,7 +13,7 @@
                                 <img :src="data.imgSrc" class="book-cover"></div>
                                 <div class="undercover" style="border-color: #5c5959;"></div>
                             </div>
-                            <a class="btn btn-danger btn-block go-btn" href="#" v-if="data.expiryStatus === 'expired'"> PURCHASE? </a>
+                            <a class="btn btn-danger btn-block go-btn" v-if="data.expiryStatus === 'expired'"> PURCHASE? </a>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12 rsrc-display">
                             <a :href="'/go/titles/' + data.title.split(' ').join('-')">
@@ -37,10 +37,14 @@
                                     <img class=view-all-png src="@/assets/svgs/view_all.png"/>
                                     <span class="svg-text">View All Resources</span>
                                 </a>
-                                <div class="panel panel-default panel-default-size" style="display: none" v-bind:id="'panel-'+data.id">
+                                <div class="panel panel-default" style="display: none" v-bind:id="'panel-'+data.id">
                                     <div class="panel-body">
-                                        <ul v-for="(tabs) in data.tabs" :key="tabs.index">
-                                            <li>{{ tabs.name }}</li>
+                                        <ul>
+                                            <li v-for="tabs in data.tabs" :key="tabs.index">
+                                                <a class="resource-tabs">
+                                                    <span v-bind:class="{view_all_resources_active : tabs.hasAccess, view_all_resources_inactive : !tabs.hasAccess}">{{ tabs.name }}</span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -68,7 +72,7 @@
 
                         <!-- Right Handside Launcher -->
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-else>
-                            <span v-for="(tabs) in data.tabs" :key="tabs.index">
+                            <span v-for="tabs in data.tabs" :key="tabs.index">
                                 <a v-if="tabs.isLauncher === true"
                                     class="btn btn-default btn-block go-resource-btn edu-green edu-green-pdf edu-downloadables">
                                     {{ tabs.name }}
@@ -86,7 +90,6 @@
 </template>
 
 <script>
-    // import dataJson from '../assets/myresources.json'
     import spinner from '../assets/svgs/load.gif'
 
     export default {
@@ -94,7 +97,6 @@
         data() {
             return {
                 bottom: false,
-                // resources: this.$store.state.resources,
                 loading: false,
                 spinner,
                 sessionData: this.$store.state.sessionData, // dataJson for current session only
@@ -106,8 +108,7 @@
               this.bottom = this.bottomVisible()
             })
 
-            const initialItemCount = 4
-            this.addResources(initialItemCount)
+            this.addResources(this.$store.state.initialItemCount)
         },
         methods: {
             bottomVisible() {
@@ -139,12 +140,12 @@
             deleteResource(index) {
                 this.$store.commit('deleteResource', index)
             },
-            showResourcesPanel(id){
-                var panel = document.getElementById("panel-"+id);
-                    if(panel.style.display == "none"){
-                        panel.style.display="block";
-                    } else{
-                        panel.style.display="none";
+            showResourcesPanel(id) {
+                var panel = document.getElementById("panel-" + id)
+                    if (panel.style.display === "none"){
+                        panel.style.display = "block"
+                    } else {
+                        panel.style.display = "none"
                     }
             }
         },
