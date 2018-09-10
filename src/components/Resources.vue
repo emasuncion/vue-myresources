@@ -38,7 +38,7 @@
                                     <div class="panel" id="show-panel">
                                         <div class="panel-body" style="display: none" v-bind:id="'panel-body-'+data.id">
                                             <ul id="show-panel-resources" 
-                                                v-for="(tabs, index) in data.tabs" :key="tabs.index">
+                                                v-for="tabs in data.tabs" :key="tabs.index">
                                                 <li>{{ tabs.name }}</li>
                                             </ul>
                                         </div>
@@ -69,7 +69,7 @@
 
                         <!-- Right Handside Launcher -->
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-else>
-                            <span v-for="(tabs, index) in data.tabs" :key="tabs.index">
+                            <span v-for="tabs in data.tabs" :key="tabs.index">
                                 <a v-if="tabs.isLauncher === true"
                                     class="btn btn-default btn-block go-resource-btn edu-green edu-green-pdf edu-downloadables">
                                     {{ tabs.name }}
@@ -107,8 +107,7 @@
               this.bottom = this.bottomVisible()
             })
 
-            const initialItemCount = 4
-            this.addResources(initialItemCount)
+            this.addResources(this.$store.state.initialItemCount)
         },
         methods: {
             bottomVisible() {
@@ -140,13 +139,13 @@
             deleteResource(index) {
                 this.$store.commit('deleteResource', index)
             },
-            showResourcesPanel(id){
-                var panel = document.getElementById("panel-body-"+id);
-                    if(panel.style.display == "none"){
-                        panel.style.display="block";
-                    } else{
-                        panel.style.display="none";
-                    }
+            showResourcesPanel(id) {
+                var panel = document.getElementById("panel-body-" + id)
+                if (panel.style.display === "none") {
+                    panel.style.display = "block";
+                } else {
+                    panel.style.display = "none";
+                }
             }
         },
         watch: {

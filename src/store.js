@@ -8,7 +8,8 @@ export default new Vuex.Store({
     state: {
         resources: [],
         sessionData: dataJson,
-        sortJson: dataJson
+        sortJson: dataJson,
+        initialItemCount: 4
     },
     mutations: {
         addResource(state, data) {
@@ -19,14 +20,24 @@ export default new Vuex.Store({
             state.sessionData.splice(data, 1)
         },
         sortAZ(state) {
-            state.resources = state.sortJson.sort(function(a, b) {
+            state.sessionData = state.sortJson.sort(function(a, b) {
                 return a.title > b.title
             })
+
+            state.resources = []
+            for (let i = 0; i < state.initialItemCount; i++) {
+                state.resources.push(state.sessionData[i])
+            }
         },
         sortZA(state) {
-            state.resources = state.sortJson.sort(function(a, b) {
+            state.sessionData = state.sortJson.sort(function(a, b) {
                 return a.title < b.title
             })
+
+            state.resources = []
+            for (let i = 0; i < state.initialItemCount; i++) {
+                state.resources.push(state.sessionData[i])
+            }
         }
     }
 })
