@@ -1437,3 +1437,24 @@ a.expired.resource-action:hover {
     text-decoration: none !important;
     cursor: pointer;
 }
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  display: table;
+  transition: opacity .3s ease;
+  margin: 0px auto;
+  padding: 20px 30px;
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.pdf_info{
+    position: absolute;
+    top:50px;
+    left:400px;
+    height:350px;
+    width: 400px;
+}

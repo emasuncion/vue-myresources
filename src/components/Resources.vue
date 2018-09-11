@@ -74,10 +74,83 @@
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right" v-else>
                             <span v-for="tabs in data.tabs" :key="tabs.index">
                                 <a v-if="tabs.isLauncher === true"
-                                    class="btn btn-default btn-block go-resource-btn edu-green edu-green-pdf edu-downloadables">
+                                    class="btn btn-default btn-block go-resource-btn edu-green edu-green-pdf edu-downloadables" @click="showModal">
                                     {{ tabs.name }}
                                 </a>
                             </span>
+                            <modal name="right-hand-side-modal" class="modal-mask" :width="900" :height="800">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" 
+                                                class="close" 
+                                                data-dismiss="modal" 
+                                                aria-label="Close"
+                                                @click="hideModal">
+                                            <span aria-hidden="true">x</span>
+                                        </button>
+                                        <h4 class="modal-title" id="generalModalLabel">Sample</h4>
+                                    </div>
+                                    <div class="modal-body container-bg-2">
+                                        <div style="cursor: pointer;">
+                                            <p>
+                                                <strong>Sample</strong>
+                                                <p style="margin-left:10px">1. Sample</p>
+                                                <p style="margin-left:10px">2. Sample</p>
+                                                <p style="margin-left:10px">3. Sample</p>
+                                                <p style="margin-left:10px">4. Sample</p>
+                                                <p style="margin-left:10px">5. Sample</p>
+                                            <br>
+                                            <p>
+                                                <strong>Sample</strong>
+                                                <p style="margin-left:10px">1. Sample</p>
+                                                <p style="margin-left:10px">2. Sample</p>
+                                                <p style="margin-left:10px">3. Sample</p>
+                                                <p style="margin-left:10px">4. Sample</p>
+                                                <p style="margin-left:10px">5. Sample</p>
+                                                <p style="margin-left:10px">6. Sample</p>
+                                                <p style="margin-left:10px">7. Sample</p>
+                                                <p style="margin-left:10px">8. Sample</p>
+                                                <p style="margin-left:10px">9. Sample</p>
+                                                <p style="margin-left:10px">10. Sample</p>
+                                                <p style="margin-left:10px">11. Sample</p>
+                                                <p style="margin-left:10px">12. Sample</p>
+                                                <p style="margin-left:10px">13. Sample</p>
+                                                <p style="margin-left:10px">14. Sample</p>
+                                                <p style="margin-left:10px">15. Sample</p>
+                                                <p style="margin-left:10px">16. Sample</p>
+                                            </p>
+                                        </div>
+                                            <div class="pdf_info">
+                                                <p>
+                                                    You are entitled to download and store these PDFs. However they may not be transferred to another party, including other students, as electronic or print versions.</p>
+                                                <p>
+                                                    To use the enhanced PDF functions, such as note taking, you must download these PDFs to your computer and open them with Adobe Reader 9 or later.</p>
+                                                <p>
+                                                    The PDF Textbook is designed for full functionality using the latest version of Adobe Reader. The markup function is available in selected PDF readers for the iPad and other devices using iOS. Check your PDF reader specifications. At the time of publication, Adobe Reader, Good Reader and PDF Expert were viable options.</p>
+                                                <p>
+                                                    Note that some PDF file names may comprise the ISBN and chapter number.</p>
+
+                                                    <br></br>
+                                                <table border="0" cellpadding="1" cellspacing="3" style="width: 325px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td> 
+                                                                You must have Adobe Reader installed to view the PDF files.
+                                                            </td>
+                                                            <td style="text-align: right;">
+                                                                <a href="http://www.adobe.com/go/EN_US-H-GET-READER" target="_blank">
+                                                                    <img alt src="http://www.adobe.com/images/shared/download_buttons/get_adobe_reader.png" style="width: 158px; height: 39px;">
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>                                                
+                                                </table>
+                                            </div>
+                                            
+                                    </div>
+
+                                </div>
+                            </modal>
                         </div>
                     </div>
                 </div>
@@ -147,6 +220,12 @@
                     } else {
                         panel.style.display = "none"
                     }
+            },
+            showModal() {
+                this.$modal.show('right-hand-side-modal');
+            },
+            hideModal() {
+                this.$modal.hide('right-hand-side-modal');
             }
         },
         watch: {
