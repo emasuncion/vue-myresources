@@ -9,7 +9,9 @@ export default new Vuex.Store({
         resources: [],
         sessionData: dataJson,
         sortJson: dataJson,
-        initialItemCount: 4
+        initialItemCount: 4,
+        headerUserName: 'Student Reg 2',
+        userName: 'Student Reg 2 UAT 1'
     },
     mutations: {
         addResource(state, data) {

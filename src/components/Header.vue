@@ -77,7 +77,7 @@
                                     <PadlockSVG v-if="$route.path === '/'"/>
                                     <LoginSVG v-else/>
                                     <span v-if="$route.path === '/'" class="svg-text">Login</span>
-                                    <span v-else class="svg-text">Vue Group</span>
+                                    <span v-else class="svg-text">{{ this.$store.state.headerUserName }}</span>
                                 </div>
                             </div>
                             <div class="col-lg-6">

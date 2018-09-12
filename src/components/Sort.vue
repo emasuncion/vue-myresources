@@ -8,7 +8,7 @@
                         <div class="row">
                             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                                 <p>Welcome</p>
-                                <h1>Vue Group</h1>
+                                <h1>{{ this.$store.state.userName }}</h1>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-right">
                                 <div class="go-dropdown" @click="showArrange">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
 </div>
 </template>
 
